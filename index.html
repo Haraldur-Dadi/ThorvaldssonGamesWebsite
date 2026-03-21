@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thorvaldsson Games</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #0f0f12;
+      --surface: #1a1a22;
+      --border: #2a2a36;
+      --text: #d8d8e8;
+      --muted: #7878a0;
+      --accent: #8fa8c8;
+      --accent-hover: #a8c0dc;
+      --badge-demo: #2a3d2e;
+      --badge-demo-text: #7ec88a;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 3rem 1.5rem 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+    }
+
+    header p {
+      margin-top: 0.4rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    main {
+      flex: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+      width: 100%;
+    }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .game-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: border-color 0.2s;
+    }
+
+    .game-card:hover {
+      border-color: var(--accent);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .card-header h2 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .badge {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 0.2em 0.6em;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .badge-demo {
+      background: var(--badge-demo);
+      color: var(--badge-demo-text);
+    }
+
+    .card-desc {
+      color: var(--muted);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .play-btn {
+      display: inline-block;
+      margin-top: 0.25rem;
+      padding: 0.55rem 1.25rem;
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.15s, color 0.15s;
+      align-self: flex-start;
+    }
+
+    .play-btn:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Thorvaldsson Games</h1>
+    <p>Small games made with care.</p>
+  </header>
+
+  <main>
+    <div class="games-grid">
+
+      <div class="game-card">
+        <div class="card-header">
+          <h2>The Quiet Order</h2>
+          <span class="badge badge-demo">Demo</span>
+        </div>
+        <p class="card-desc">
+          A calm logic puzzle game. Place monks on a board so that each row,
+          column, and colored region contains exactly one — and no two monks
+          are adjacent.
+        </p>
+        <a class="play-btn" href="the-quiet-order/index.html">Play</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Thorvaldsson Games
+  </footer>
+</body>
+</html>
