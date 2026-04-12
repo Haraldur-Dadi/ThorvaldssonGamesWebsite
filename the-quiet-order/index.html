@@ -27,13 +27,13 @@
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
         arguments: [],
-        dataUrl: "Build/the-quiet-order.data.unityweb",
-        frameworkUrl: "Build/the-quiet-order.framework.js.unityweb",
-        codeUrl: "Build/the-quiet-order.wasm.unityweb",
+        dataUrl: "Build/the-quiet-order.data",
+        frameworkUrl: "Build/the-quiet-order.framework.js",
+        codeUrl: "Build/the-quiet-order.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "ThorvaldssonGames",
         productName: "SilentCloister",
-        productVersion: "0.1.1",
+        productVersion: "0.2.0",
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       }).then((unityInstance) => {
